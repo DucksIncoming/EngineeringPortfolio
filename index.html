@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
   <title>Ricky Jones - Mechanical Engineer</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
@@ -16,11 +17,11 @@
   <div class="site-wrapper">
     <div class="panel" id="panel-header">
       <div class="navigation-container">
-        <a id="nav-button-about" class="nav-button">About me</a>
-        <a id="nav-button-about" class="nav-button">Education</a>
-        <a id="nav-button-about" class="nav-button">Experience</a>
-        <a id="nav-button-about" class="nav-button">Projects</a>
-        <a id="nav-button-about" class="nav-button">Contact</a>
+        <a id="nav-button-about" class="nav-button" onclick='window.open(href="about-me.html", target="_self")'>About me</a>
+        <a id="nav-button-about" class="nav-button" onclick='window.open(href="education.html", target="_self")'>Education</a>
+        <a id="nav-button-about" class="nav-button" onclick='window.open(href="experienec.html", target="_self")'>Experience</a>
+        <a id="nav-button-about" class="nav-button" onclick='window.open(href="projects.html", target="_self")'>Projects</a>
+        <a id="nav-button-about" class="nav-button" onclick='window.open(href="contact.html", target="_self")'>Contact</a>
       </div>
 
       <div class="header-widget-left" id="header-widget-left">
@@ -55,7 +56,7 @@
         <div class="panel-info-box-accent"></div>
         <p class="panel-info-text">My name is Ricky, and I am a mechanical engineer with a passion for automated systems, aerospace, and working with microcontrollers. I'm a very self-motivated person and I am constantly working on side projects as well as professional work, most of which can be found on my GitHub.</p>
         <p class="panel-info-text">I'm currently an undergraduate at Virginia Commonwealth University pursuing two B.S. degrees in Mechanical Engineering and Physics. I expect to graduate in May 2027 and continue with graduate studies.</p>
-        <button class="panel-info-readmore">Read More</button>
+        <button class="panel-info-readmore" onclick='window.open(href="about-me.html", target="_self")'>Read More</button>
       </div>
     </div>
     <div class="panel" id="panel-education">
@@ -64,7 +65,7 @@
       <p class="panel-title-left"><span style="font-weight: 300;">Education</span></p>
       <div class="panel-info-box">
         <div class="panel-info-box-accent"></div>
-        <button class="panel-info-readmore">Read More</button>
+        <button class="panel-info-readmore" onclick='window.open(href="education.html", target="_self")'>Read More</button>
         <p class="panel-info-text">In high school, I went to the Math and Science Specialty Center at Clover Hill High School, eventually attending Virginia Commonwealth University in the Honors College. I am currently pursuing two bachelor's degrees, one in mechanical engineering and one in physics.</p>
         <p class="panel-info-text">You can read more about my GPA, relevant courses, student organizations, and more in the education section of my resume or by clicking the "read more" button.</p>
       </div>
@@ -77,7 +78,7 @@
         <div class="panel-info-box-accent"></div>
         <p class="panel-info-text">I've worked a number of jobs throughout my life and held an internship at the Jefferson Lab National Accelerator Facility, alongside my partner Emmett Souder and my mentor Carroll Jones. I've experienced first-hand the engineering process and learned from the wisdom of experts around me.</p>
         <p class="panel-info-text">I also have collectively spent two years working in customer service roles which have given me tremendous insight into leadership in a workplace and handling conflict in a professional setting. I am currently looking for an internship or co-op for Spring and Summer of 2024.</p>
-        <button class="panel-info-readmore">Read More</button>
+        <button class="panel-info-readmore" onclick='window.open(href="experience.html", target="_self")'>Read More</button>
       </div>
     </div>
     <div class="panel" id="panel-projects">
@@ -86,7 +87,7 @@
       <p class="panel-title-left"><span style="font-weight: 300;">Projects</span></p>
       <div class="panel-info-box">
         <div class="panel-info-box-accent"></div>
-        <button class="panel-info-readmore">Read More</button>
+        <button class="panel-info-readmore" onclick='window.open(href="projects.html", target="_self")'>Read More</button>
         <p class="panel-info-text">I've undertaken a handful of academic projects that allowed me to express the skills I've been developing over the past few years and grown my understanding of several engineering concepts and topics through the guidance of my professors.</p>
         <p class="panel-info-text">I also love to work on personal projects, typically revolving around programming or arduino-based devices. I have written a full technical report for the majority of my projects, which can all be read in detail by clicking "read more."</p>
       </div>
@@ -128,12 +129,12 @@
             <p class="skill-description">Experience with Arduino, Raspberry Pi development, and general circuit design</p>
           </div>
         </div>
-        <button class="skills-readmore">More Skills</button>
+        <button class="skills-readmore" onclick='window.open(href="Assets/Misc/resume.pdf", target="_blank")'>More Skills</button>
       </div>
     </div>
     <div class="minipanel">
       <p class="contact-title">Contact</p>
-      <p class="contact-description">Feel free to email me at jonesr30@vcu.edu for any business inquiries, or you can message me on LinkedIn. If you would like to text or speak over the phone, please email me first requesting the number for privacy reasons. Thanks!</p>
+      <p class="contact-description">Feel free to email me at <span style="text-decoration: underline">jonesr30@vcu.edu</span> for any business inquiries, or you can message me on LinkedIn. If you would like to text or speak over the phone, please email me first requesting the number for privacy reasons. Thanks!</p>
       <p class="copyright-notice">© Copyright 2023-24, Ricky Jones. All rights reserved.</p>
       <div class="contact-connections-container">
         <input type="image" src="Assets/Icons/Navigation/email-icon.png" class="header-connection" onclick="window.open(href='mailto:jonesr30@vcu.edu', target='_blank')">

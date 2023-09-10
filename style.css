@@ -28,7 +28,7 @@
 
 body {
   overflow: hidden;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   margin-left: 0;
   margin-top: 0;
 }
@@ -84,10 +84,11 @@ body {
   font-weight: 300;
   font-size: max(min(1.5vw,2.5vh), 1em);
   cursor: pointer;
-  width: 20vw;
-  padding-left: 2vw;
+  width: auto;
+  margin-left: 1vw;
+  margin-right: 4vw;
   opacity: 0.5;
-  text-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .nav-button:hover {
@@ -101,7 +102,6 @@ body {
   position: relative;
   margin-left: 10%;
   margin-top: 15%;
-  font-family: "Roboto";
   cursor: default;
 }
 
@@ -138,7 +138,6 @@ body {
   outline: none;
   border: 0;
   border-radius: 100vw;
-  font-family: "Roboto";
   color: white;
   font-size: 1.1vw;
   font-weight: 300;
@@ -344,7 +343,6 @@ body {
   outline: none;
   border: 0;
   border-radius: 100vw;
-  font-family: "Roboto";
   color: white;
   font-size: 1.1vw;
   font-weight: 300;
@@ -352,7 +350,7 @@ body {
   cursor: pointer;
   position: relative;
   margin-top: 7vh;
-  margin-left: 6vw;
+  margin-left: 3vw;
 }
 
 .panel-info-readmore:hover {
@@ -363,7 +361,7 @@ body {
   position: relative;
   width: 35vw;
   top: 5%;
-  margin-left: 3vw;
+  margin-left: 4vw;
   font-size: 1.2vw;
   font-weight: 300;
 }
@@ -412,7 +410,6 @@ body {
 
 .skill-title {
   color: white;
-  font-family: "Roboto";
   padding-left: 6vw;
   font-size: 1.5vw;
   font-weight: 300;
@@ -421,7 +418,6 @@ body {
 
 .skill-description {
   color: white;
-  font-family: "Roboto";
   font-size: 1vw;
   margin-top: 1vh;
   padding-left: 6vw;
@@ -491,4 +487,141 @@ body {
   font-size: 0.8vw;
   position: absolute;
   top: 12vw;
+}
+
+.info-page-navbar {
+  background-color: #1e1e1e;
+  width: 100vw;
+  height: 10vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: right;
+  padding-right: 5vw;
+}
+
+.info-navbar-button {
+  margin-right: 3vw;
+  margin-top: 5vh;
+  transform: translateY(-20%);
+  color: white;
+  font-size: 3vh;
+  float: right;
+  text-align: right;
+  justify-self: right;
+  width: auto;
+  height: 10vh;
+  background-color: #1e1e1e;
+  opacity: 0.5;
+  transition-duration: 0.1s;
+  cursor: pointer;
+}
+
+.info-navbar-button:hover {
+  opacity: 1;
+}
+
+.info-navbar-title {
+  color: white;
+  position: absolute;
+  top: 5vh;
+  font-size: 3vh;
+  transform: translateY(-50%);
+  left: 2vw;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.info-navbar-title:hover {
+  opacity: 1;
+}
+
+.info-page-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  margin-top: 10vh;
+  margin-left: 0;
+  background-color: #0d0d0d;
+}
+
+.info-post-container {
+  width: 80vw;
+  height: 100vh;
+  position: relative;
+  margin-top: 0;
+  margin-left: 10vw;
+  background-color:#484a47;
+  color: white;
+  overflow-y: scroll;
+}
+
+.info-post-title {
+  font-size: 2.5vw;
+  font-weight: 600;
+  margin-bottom: 2vh;
+  text-align: center;
+}
+
+.info-post-content-container {
+  width: 60%;
+  position: relative;
+  margin-top: 2vw;
+  margin-left: 20%;
+  padding-bottom: 2vh;
+}
+
+.info-post-image-left {
+  float: left;
+  margin-right: 1vw;
+  width: 20vw;
+  position: relative;
+}
+
+.info-post-image-right {
+  float: right;
+  margin-left: 1vw;
+  width: 20vw;
+  position: relative;
+}
+
+.info-post-text {
+  font-size: 1.2vw;
+  position: relative;
+}
+
+.info-footer {
+  position: relative;
+  margin: 0;
+  margin-top: 10vh;
+  height: 25vh;
+  background-color: #1e1e1e;
+} 
+
+.info-connections-container {
+  position: absolute;
+  z-index: 100;
+  left: 50%;
+  top: 6vh;
+  transform: translateX(-50%);
+}
+
+.info-copyright-notice {
+  color: white;
+  width: 50vw;
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.8vw;
+  position: absolute;
+  top: 1vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.info-post-title-accent {
+  width: 40%;
+  height: 1vh;
+  background-color: #f02d3a;
+  margin-left: 30%;
 }
