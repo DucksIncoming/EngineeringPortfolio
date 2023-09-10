@@ -2,49 +2,147 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Hello, world!</title>
+  <title>Ricky Jones - Mechanical Engineer</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
-  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="Assets/Icons/favicon.png">
 </head>
 <body>
   <div id="loader-wrapper">
     <div class="loader"></div>
   </div>
-  <style>
-    /* For best practice, move CSS below to an external CSS file. */
-    @keyframes rotation {
-      0% {
-        transform: rotate(0deg); }
-      100% {
-        transform: rotate(360deg); } }
-    #loader-wrapper {
-      background-color: #FFFFFF;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 999;
-      width: 100%;
-      height: 100%;
-      text-align: center; }
-    .loader {
-      width: 40px;
-      height: 40px;
-      border: 5px solid #000000;
-      border-bottom-color: transparent;
-      border-radius: 50%;
-      margin-top:calc(50vh - 20px);
-      display: inline-block;
-      box-sizing: border-box;
-      -webkit-animation: rotation 1s linear infinite;
-      animation: rotation 1s linear infinite; }
-  </style>
-  <h1>Hello, world!</h1>
+
+  <div class="site-wrapper">
+    <div class="panel" id="panel-header">
+      <div class="navigation-container">
+        <a id="nav-button-about" class="nav-button">About me</a>
+        <a id="nav-button-about" class="nav-button">Education</a>
+        <a id="nav-button-about" class="nav-button">Experience</a>
+        <a id="nav-button-about" class="nav-button">Projects</a>
+        <a id="nav-button-about" class="nav-button">Contact</a>
+      </div>
+
+      <div class="header-widget-left" id="header-widget-left">
+        <div class="header-title-container" id="header-title-container">
+          <p class="header-title-preface">Hi there, I'm</p>
+          <p class="header-title-name">Ricky Jones</p>
+        </div>
+
+        <p class="header-left-blurb">I'm a passionate mechanical engineering student at VCU, currently looking for an internship or co-op experience to strengthen my skills and learn from professionals in my field.</p>
+        <button class="header-resume-button" onclick='window.open(href="Assets/Misc/resume.pdf", target="_blank")'>View Resume</button>
+        <div class="header-connections-container">
+          <input type="image" src="Assets/Icons/Navigation/email-icon.png" class="header-connection" onclick="window.open(href='mailto:jonesr30@vcu.edu', target='_blank')">
+          <input type="image" src="Assets/Icons/Navigation/github-logo.png" class="header-connection" onclick='window.open(href="https://github.com/DucksIncoming/", target="_blank")'>
+          <input type="image" src="Assets/Icons/Navigation/linkedin-logo.png" class="header-connection" onclick='window.open(href="https://linkedin.com/in/rickyjones30/", target="_blank")'>
+        </div>
+      </div>
+      <div class="header-widget-right">
+        <img src="Assets/Images/photo_headshot.png" class="header-headshot-image" data-parallax-factor="40">
+        <img src="Assets/Graphics/grid_red_1000px.png" class="header-graphic-grid" data-parallax-factor="70S">
+        <img src="Assets/Graphics/segment_circle_red_1000px.png" class="header-graphic-circle" data-parallax-factor="6">
+        <img src="Assets/Graphics/star_red_512px.png" class="header-graphic-star" data-parallax-factor="25">
+
+        <p class="header-right-blurb">I also have over 6 years of independent programming experience in languages such as Java, C++, Python, etc., and I'm well-versed in SolidWorks, Excel, and AWS.</p>
+        </div>
+        <img class="header-graphic-arrow" src="Assets/Graphics/arrow_grey_continue.png">
+    </div>
+    <div class="panel" id="panel-about-me">
+      <img class="panel-background about-me-background" src="Assets\Images\photo_jlab-group.png" data-parallax-factor="200">
+      <div class="gradient-overlay-right"></div>
+      <p class="panel-title-right">About <span style="font-weight: 300;">Me</span></p>
+      <div class="panel-info-box">
+        <div class="panel-info-box-accent"></div>
+        <p class="panel-info-text">My name is Ricky, and I am a mechanical engineer with a passion for automated systems, aerospace, and working with microcontrollers. I'm a very self-motivated person and I am constantly working on side projects as well as professional work, most of which can be found on my GitHub.</p>
+        <p class="panel-info-text">I'm currently an undergraduate at Virginia Commonwealth University pursuing two B.S. degrees in Mechanical Engineering and Physics. I expect to graduate in May 2027 and continue with graduate studies.</p>
+        <button class="panel-info-readmore">Read More</button>
+      </div>
+    </div>
+    <div class="panel" id="panel-education">
+      <img class="panel-background education-background" src="Assets\Images\photo_vcu.png" data-parallax-factor="200">
+      <div class="gradient-overlay-left"></div>
+      <p class="panel-title-left"><span style="font-weight: 300;">Education</span></p>
+      <div class="panel-info-box">
+        <div class="panel-info-box-accent"></div>
+        <button class="panel-info-readmore">Read More</button>
+        <p class="panel-info-text">In high school, I went to the Math and Science Specialty Center at Clover Hill High School, eventually attending Virginia Commonwealth University in the Honors College. I am currently pursuing two bachelor's degrees, one in mechanical engineering and one in physics.</p>
+        <p class="panel-info-text">You can read more about my GPA, relevant courses, student organizations, and more in the education section of my resume or by clicking the "read more" button.</p>
+      </div>
+    </div>
+    <div class="panel" id="panel-experience">
+      <img class="panel-background experience-background" src="Assets\Images\photo_jlab-presentation.png" data-parallax-factor="200">
+      <div class="gradient-overlay-right"></div>
+      <p class="panel-title-right">Work <span style="font-weight: 300;">Experience</span></p>
+      <div class="panel-info-box">
+        <div class="panel-info-box-accent"></div>
+        <p class="panel-info-text">I've worked a number of jobs throughout my life and held an internship at the Jefferson Lab National Accelerator Facility, alongside my partner Emmett Souder and my mentor Carroll Jones. I've experienced first-hand the engineering process and learned from the wisdom of experts around me.</p>
+        <p class="panel-info-text">I also have collectively spent two years working in customer service roles which have given me tremendous insight into leadership in a workplace and handling conflict in a professional setting. I am currently looking for an internship or co-op for Spring and Summer of 2024.</p>
+        <button class="panel-info-readmore">Read More</button>
+      </div>
+    </div>
+    <div class="panel" id="panel-projects">
+      <img class="panel-background projects-background" src="Assets\Images\photo_morse-tapper.png" data-parallax-factor="200">
+      <div class="gradient-overlay-left"></div>
+      <p class="panel-title-left"><span style="font-weight: 300;">Projects</span></p>
+      <div class="panel-info-box">
+        <div class="panel-info-box-accent"></div>
+        <button class="panel-info-readmore">Read More</button>
+        <p class="panel-info-text">I've undertaken a handful of academic projects that allowed me to express the skills I've been developing over the past few years and grown my understanding of several engineering concepts and topics through the guidance of my professors.</p>
+        <p class="panel-info-text">I also love to work on personal projects, typically revolving around programming or arduino-based devices. I have written a full technical report for the majority of my projects, which can all be read in detail by clicking "read more."</p>
+      </div>
+    </div>
+    <div class="panel" id="panel-skills">
+      <div class="skills-background">
+        <p class="skills-panel-title">My Skills</p>
+        <div class="skill-row">
+          <div class="skill-block">
+            <img src="Assets/Icons/Skills/skill-programming.png" class="skill-image">
+            <p class="skill-title">Programming</p>
+            <p class="skill-description">Proficient in Java, Python, C++, Javascript/Typescript</p>
+          </div>
+          <div class="skill-block">
+            <img src="Assets/Icons/Skills/skill-cad.png" class="skill-image">
+            <p class="skill-title">CAD Software</p>
+            <p class="skill-description">Experienced in SolidWorks and Fusion 360</p>
+          </div>
+          <div class="skill-block">
+            <img src="Assets/Icons/Skills/skill-msoffice.png" class="skill-image">
+            <p class="skill-title">Microsoft 365</p>
+            <p class="skill-description">Microsoft Excel, Word, and Powerpoint</p>
+          </div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-block">
+            <img src="Assets/Icons/Skills/skills-adobecc.png" class="skill-image">
+            <p class="skill-title">Adobe CC</p>
+            <p class="skill-description">3+ years experience with Photoshop, Premiere, Acrobat, and Illustrator</p>
+          </div>
+          <div class="skill-block">
+            <img src="Assets/Icons/Skills/skills-systems.png" class="skill-image">
+            <p class="skill-title">Systems Analysis</p>
+            <p class="skill-description">Control diagram analysis, etc. First hand experience from JLAB internship.</p>
+          </div>
+          <div class="skill-block">
+            <img src="Assets/Icons/Skills/skills-circuits.png" class="skill-image">
+            <p class="skill-title">Circuit Design</p>
+            <p class="skill-description">Experience with Arduino, Raspberry Pi development, and general circuit design</p>
+          </div>
+        </div>
+        <button class="skills-readmore">More Skills</button>
+      </div>
+    </div>
+    <div class="minipanel">
+      <p class="contact-title">Contact</p>
+      <p class="contact-description">Feel free to email me at jonesr30@vcu.edu for any business inquiries, or you can message me on LinkedIn. If you would like to text or speak over the phone, please email me first requesting the number for privacy reasons. Thanks!</p>
+      <p class="copyright-notice">© Copyright 2023-24, Ricky Jones. All rights reserved.</p>
+      <div class="contact-connections-container">
+        <input type="image" src="Assets/Icons/Navigation/email-icon.png" class="header-connection" onclick="window.open(href='mailto:jonesr30@vcu.edu', target='_blank')">
+        <input type="image" src="Assets/Icons/Navigation/github-logo.png" class="header-connection" onclick='window.open(href="https://github.com/DucksIncoming/", target="_blank")'>
+        <input type="image" src="Assets/Icons/Navigation/linkedin-logo.png" class="header-connection" onclick='window.open(href="https://linkedin.com/in/rickyjones30/", target="_blank")'>
+      </div>
+    </div>
+  </div>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
-  <script type="text/javascript">
-    $(window).on('load', function() {
-      $("#loader-wrapper").fadeOut(700);
-    });
-  </script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

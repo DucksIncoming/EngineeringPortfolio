@@ -1,0 +1,494 @@
+/* Basic page fade junk*/
+@keyframes rotation {
+    0% {
+      transform: rotate(0deg); }
+    100% {
+      transform: rotate(360deg); } }
+  #loader-wrapper {
+    background-color: #FFFFFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    text-align: center; }
+  .loader {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #000000;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    margin-top:calc(50vh - 20px);
+    display: inline-block;
+    box-sizing: border-box;
+    -webkit-animation: rotation 1s linear infinite;
+    animation: rotation 1s linear infinite; 
+}
+
+body {
+  overflow: hidden;
+  font-family: "Roboto";
+  margin-left: 0;
+  margin-top: 0;
+}
+
+.panel {
+  width: 100vw;
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  height: 100vh;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  overflow: hidden;
+}
+
+.header-widget-left {
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #9197ae;
+}
+
+
+.header-widget-right {
+  width: 50vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 50vw;
+  background-color: #eff6ee;
+}
+
+.navigation-container {
+  width: 40vw;
+  height: auto;
+  padding-left: 1vw;
+  position: absolute;
+  flex-basis: 2vw;
+  text-align: center;
+  display: flex;
+  top: 2vh;
+  left: 0;
+  color: white;
+  z-index: 100;
+}
+
+.nav-button {
+  font-weight: 300;
+  font-size: max(min(1.5vw,2.5vh), 1em);
+  cursor: pointer;
+  width: 20vw;
+  padding-left: 2vw;
+  opacity: 0.5;
+  text-wrap: nowrap;
+}
+
+.nav-button:hover {
+  transition-duration: 0.1s;
+  opacity: 1;
+}
+
+.header-title-container {
+  width: 60%;
+  height: 50%;
+  position: relative;
+  margin-left: 10%;
+  margin-top: 15%;
+  font-family: "Roboto";
+  cursor: default;
+}
+
+.header-title-preface {
+  color: #eff6ee;
+  font-size: 2vw;
+  margin: 0;
+}
+
+.header-title-name {
+  color: #eff6ee;
+  font-size: max(8vw, 10%);
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+}
+
+.header-left-blurb {
+  width: 70%;
+  position: relative;
+  margin-left: 10%;
+  bottom: 0;
+  color: white;
+  font-size: 1vw;
+}
+
+.header-resume-button {
+  width: 25%;
+  margin-left: 37.5%;
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+  background-color: #484a47;
+  height: 6vh;
+  outline: none;
+  border: 0;
+  border-radius: 100vw;
+  font-family: "Roboto";
+  color: white;
+  font-size: 1.1vw;
+  font-weight: 300;
+  transition-duration: 0.2s;
+}
+
+.header-resume-button:hover {
+  background-color: #f02d3a;
+  cursor: pointer;
+}
+
+.header-headshot-image {
+  position: absolute;
+  width: 40%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-65%, -50%);
+  z-index: 10;
+}
+
+.header-graphic-grid {
+  z-index: 5;
+  width: 20%;
+  opacity: 0.5;
+  position: absolute;
+  top: 50%;
+  right: 15vw;
+  transform: translateY(50%);
+}
+
+.header-graphic-circle {
+  opacity: 0.5;
+  width: 30%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 15;
+  transform: translateY(-140%);
+}
+
+.header-graphic-star {
+  z-index: 15;
+  width: 10%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-325%, -260%);
+  opacity: 0.5;
+}
+
+.header-graphic-arrow {
+  width: 4vw;
+  position: absolute;
+  bottom: 1vh;
+  opacity: 0.5;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+}
+
+.header-right-blurb {
+  width: 60%;
+  position: absolute;
+  text-align: right;
+  left: 50%;
+  top: 50%;
+  bottom: 5vh;
+  transform: translate(-50%,80%);
+  z-index: 50%;
+  color: black;
+  font-size: 1vw;
+}
+
+.site-wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.header-connections-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contact-connections-container {
+  position: absolute;
+  left: 50%;
+  top: 30vh;
+  transform: translateX(-50%);
+}
+
+.header-connection {
+  margin-top: 2vh;
+  height: 4vh;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.header-connection:hover {
+  transition-duration: 0.1s;
+  opacity: 1;
+}
+
+.panel-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 120vw;
+}
+
+.projects-background {
+  transform: translate(-50%, -60%);
+  width: 150vw;
+}
+
+.experience-background {
+  width: 110vw;
+}
+
+.about-me-background {
+  transform: translate(-50%, -40%);
+}
+
+.education-background {
+  transform: translate(-50%, -60%);
+}
+
+.gradient-overlay-left {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  z-index: 10;
+  background: linear-gradient(90deg, rgba(240,45,58,0.75) 0%, rgba(240,45,58,0.1) 100%);
+}
+
+.gradient-overlay-right {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  z-index: 10;
+  background: linear-gradient(-90deg, rgba(240,45,58,0.75) 0%, rgba(240,45,58,0.1) 100%);
+}
+
+.panel-info-box {
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 20vh;
+  background-color: rgba(255,255,255,0.75);
+  z-index: 15;
+  display: flex;
+}
+
+.panel-info-box-accent {
+  width: 100vw;
+  height: 1vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #bc2c1a;
+}
+
+.panel-title-right {
+  z-index: 20;
+  color: white;
+  font-size: 8vw;
+  font-weight: 200;
+  width: 50vw;
+  text-align: right;
+  word-spacing: 50vw;
+  position: absolute;
+  bottom: 5vh;
+  right: 3vw;
+}
+
+.panel-title-left {
+  z-index: 20;
+  color: white;
+  font-size: 8vw;
+  font-weight: 200;
+  width: 50vw;
+  text-align: left;
+  word-spacing: 50vw;
+  position: absolute;
+  bottom: 5vh;
+  left: 3vw;
+}
+
+.panel-info-readmore {
+  width: 10vw;
+  background-color: #484a47;
+  height: 6vh;
+  outline: none;
+  border: 0;
+  border-radius: 100vw;
+  font-family: "Roboto";
+  color: white;
+  font-size: 1.1vw;
+  font-weight: 300;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  position: relative;
+  margin-top: 7vh;
+  margin-left: 6vw;
+}
+
+.panel-info-readmore:hover {
+  background-color: #f02d3a;
+}
+
+.panel-info-text {
+  position: relative;
+  width: 35vw;
+  top: 5%;
+  margin-left: 3vw;
+  font-size: 1.2vw;
+  font-weight: 300;
+}
+
+.skills-background {
+  background-color: #9197ae;
+  width: 100%;
+  height: 100%;
+}
+
+.skills-panel-title {
+  color: white;
+  font-size: 2vw;
+  text-align: center;
+  font-weight: 300;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.skill-row {
+  display: flex;
+  width: 80vw;
+  height: 25vh;
+  position: relative;
+  margin-top: 0;
+  margin-left: 10vw;
+  margin-bottom: 2vh;
+}
+
+.skill-block {
+  width: 20vw;
+  height: 20vh;
+  border-radius: 2vw;
+  margin-left: 5vw;
+  position: relative;
+  background-color: #484a47;
+}
+
+.skill-image {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1vw;
+  width: 4vw;
+}
+
+.skill-title {
+  color: white;
+  font-family: "Roboto";
+  padding-left: 6vw;
+  font-size: 1.5vw;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.skill-description {
+  color: white;
+  font-family: "Roboto";
+  font-size: 1vw;
+  margin-top: 1vh;
+  padding-left: 6vw;
+  padding-right: 1vw;
+  font-weight: 300;
+}
+
+.skills-readmore {
+  width: 10vw;
+  height: 6vh;
+  position: absolute;
+  bottom: 11vh;
+  left: 50%;
+  transform: translateX(-50%);
+  outline: none;
+  border: 0;
+  border-radius: 100vw;
+  color: white;
+  font-size: 1vw;
+  background-color: #484a47;
+  transition-duration: 0.1s;
+}
+
+.skills-readmore:hover {
+  background-color: #f02d3a;
+  cursor: pointer;
+}
+
+.minipanel {
+  width: 100vw;
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  height: 40vh;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  overflow: hidden;
+  background-color: #484a47;
+}
+
+.contact-title {
+  color: white;
+  font-weight: 100;
+  font-size: 2vw;
+  position: absolute;
+  top: 0; 
+}
+
+.contact-description {
+  color: white;
+  width: 50vw;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1vw;
+  position: absolute;
+  top: 5vw;
+}
+
+.copyright-notice {
+  color: white;
+  width: 50vw;
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.8vw;
+  position: absolute;
+  top: 12vw;
+}
