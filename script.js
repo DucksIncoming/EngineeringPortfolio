@@ -7,7 +7,9 @@ $(window).on('load', function() { // Page fade in
 
     parallaxElements = document.querySelectorAll('[data-parallax-factor]');
 });
-    
+
+console.log("> ============\nHi there, if you're looking in here, I assume you're a web developer who wants to make their own resume website. If you want an easier look at the website code, all of it is publicly available on my github at https://www.github.com/DucksIncoming/EngineeringPortfolio :)\n> ============")
+
 function handleMousePos(event) {
     var eventDoc, doc, body;
 
@@ -36,8 +38,16 @@ function parallaxHandler(mousePosition) {
     let relToCenterPos = [mousePosition[0] - (w / 2), mousePosition[1] - (h / 2)];
 
     for (let i = 0; i < parallaxElements.length; i++){
-        let parallaxStrength = parseInt(parallaxElements[i].getAttribute("data-parallax-factor"));
+        if (w > 600){
+            let parallaxStrength = parseInt(parallaxElements[i].getAttribute("data-parallax-factor"));
         parallaxElements[i].style.left = (50 + (-relToCenterPos[0] / (10 * parallaxStrength))).toString() + "%";
         parallaxElements[i].style.top = (50 + (-relToCenterPos[1] / (10 * parallaxStrength))).toString() + "%";
+        }
+        else {
+            parallaxElements[i].style.left = 50;
+        parallaxElements[i].style.top = 50;
+            
+        }
+        
     }
 }

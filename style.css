@@ -45,7 +45,57 @@ body {
   align-items: center;
   justify-content: center;
   scroll-snap-align: start;
+  scroll-snap-stop: always;
   overflow: hidden;
+  background-attachment: fixed;
+  background-size: 100vw;
+}
+
+.header-background-white {
+  background-image: url("Assets/Graphics/homepage-background-white.png");
+  position: absolute;
+  opacity: 0.2;
+  top: 50%;
+  z-index: -1;
+  left: 50%;
+  width: 110vw;
+  height: 100vh;
+  background-repeat: repeat;
+  transform: translate(-50%, -50%);
+}
+
+.header-background-gray {
+  background-image: url("Assets/Graphics/homepage-background-gray.png");
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  width: 60vw;
+  opacity: 0.5;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  background-repeat: repeat;
+  background-size: 50vw;
+}
+
+.panel-aboutme {
+  background-image: url("Assets/Images/photo_jlab-group.png");
+  background-position-y: 10%;
+}
+
+.panel-education {
+  background-image: url("Assets/Images/photo_vcu.png");
+  background-position-y: 50%;
+}
+
+.panel-experience {
+  background-image: url("Assets/Images/photo_jlab-presentation.png");
+  background-position-y: 50%;
+}
+
+.panel-projects {
+  background-image: url("Assets/Images/photo_morse-tapper.png");
+  background-position-y: 100%;
 }
 
 .header-widget-left {
@@ -83,11 +133,12 @@ body {
 
 .nav-button {
   font-weight: 300;
+  height: 3ch;
   font-size: max(min(1.5vw,2.5vh), 1em);
   cursor: pointer;
   width: auto;
   margin-left: 1vw;
-  margin-right: 4vw;
+  margin-right: 1vw;
   opacity: 0.5;
   white-space: nowrap;
 }
@@ -98,7 +149,7 @@ body {
 }
 
 .header-title-container {
-  width: 60%;
+  width: 100%;
   height: 50%;
   position: relative;
   margin-left: 10%;
@@ -108,16 +159,17 @@ body {
 
 .header-title-preface {
   color: #eff6ee;
-  font-size: 2vw;
+  font-size: 3vh;
   margin: 0;
 }
 
 .header-title-name {
   color: #eff6ee;
-  font-size: max(8vw, 10%);
+  font-size: max(10vw,8vh);
   font-weight: 100;
   padding: 0;
   margin: 0;
+  word-spacing: 100vw;
 }
 
 .header-left-blurb {
@@ -218,6 +270,7 @@ body {
   overflow-x: hidden;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 .header-connections-container {
@@ -297,7 +350,7 @@ body {
   left: 0;
   bottom: 0;
   height: 20vh;
-  background-color: rgba(255,255,255,0.75);
+  background-color: #eff6ee;
   z-index: 15;
   display: flex;
 }
@@ -318,7 +371,7 @@ body {
   font-weight: 200;
   width: 50vw;
   text-align: right;
-  word-spacing: 50vw;
+  word-spacing: 100vw;
   position: absolute;
   bottom: 5vh;
   right: 3vw;
@@ -487,7 +540,8 @@ body {
   font-weight: 300;
   font-size: 0.8vw;
   position: absolute;
-  top: 12vw;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .info-page-navbar {
@@ -544,6 +598,7 @@ body {
   position: relative;
   margin-top: min(10vh, 100px);
   margin-left: 0;
+  z-index: 0;
   background-color: #0d0d0d;
 }
 
@@ -555,6 +610,7 @@ body {
   margin-left: 10vw;
   background-color:#484a47;
   color: white;
+  z-index: 50;
   overflow-y: scroll;
 }
 
@@ -591,7 +647,7 @@ body {
 .info-post-text {
   font-size: 1.2vw;
   position: relative;
-  margin-top: 1vh;
+  margin-top: 1vw;
 }
 
 .info-post-header {
@@ -667,4 +723,220 @@ b {
 .info-post-external-button:hover {
   background-color: #eff6ee;
   color: black;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.0;
+    margin-top: 2vw;
+  }
+  100% {
+    opacity: 1.0;
+    margin-top: 1vw;
+  }
+}
+
+.page-transition {
+  width: 100vw;
+  position: fixed;
+  top: 100vh;
+  left: 0;
+  z-index: 1000;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.page-transition-animated {
+  animation: pageScrollUp 1s;
+}
+
+@keyframes pageScrollDown {
+  0% {
+    top: 100vh;
+  }
+  100% {
+    top: -100vh;
+  }
+}
+
+@keyframes pageScrollUp {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 100vh;
+  }
+}
+
+.info-page-background {
+  background-image: url("Assets/Graphics/homepage-background-white.png");
+  background-color: #0d0d0d;
+  position: absolute;
+  opacity: 0.2;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 110vw;
+  height: 100vh;
+  background-repeat: repeat;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 1170px) and (orientation: portrait) {
+  .navigation-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-button {
+    width: auto;
+    padding: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+    background-color: #484a47;
+  }
+
+  .header-resume-button {
+    width: 40vw;
+    margin-left: 5vw;
+    font-size: 2ch;
+  }
+
+  .header-headshot-image {
+    width: 40vw;
+    transform: translate(-55%, -75%);
+  }
+
+  .header-graphic-grid {
+    transform: translate(40%, -30%);
+    width: 25vw;
+  }
+
+  .header-graphic-circle {
+    transform: translate(-10%, -220%);
+    width: 25vw;
+  }
+
+  .header-graphic-star {
+    transform: translate(-250%, -380%);
+    width: 10vw;
+  }
+
+  .header-title-container {
+    transform: translateY(40%);
+  }
+
+  .header-left-blurb {
+    font-size: 1.5ch;
+  }
+
+  .header-right-blurb {
+    font-size: 1.5ch;
+    bottom: 20vh;
+  }
+
+  .panel-info-box {
+    height: 40vh;
+  }
+
+  .panel-info-text {
+    font-size: 2ch;
+    width: 40vw;
+  }
+
+  .panel-info-readmore {
+    display: none;
+  }
+
+  .panel-title-right {
+    bottom: 35vh;
+    right: 10vw;
+    width: 100vw;
+    font-size: 8ch;
+  }
+
+  .panel-title-left {
+    bottom: 35vh;
+    left: 5vw;
+    font-size: 8ch;
+  }
+
+  .panel {
+    background-size: cover;
+  }
+
+  .skills-panel-title {
+    font-size: 4ch;
+  }
+
+  .skill-block {
+    width: 80vw;
+    height: 20vh;
+    margin-left: 5px;
+  }
+
+  .skill-title {
+    font-size: 2ch;
+  }
+
+  .skill-description {
+    font-size: 1.5ch;
+  }
+
+  .skills-readmore {
+    width: 40vw;
+    font-size: 2ch;
+  }
+  .contact-title {
+    font-size: 2ch;
+  }
+  
+  .contact-description {
+    font-size: 1.5ch;
+  }
+  
+  .copyright-notice {
+    font-size: 1.5ch;
+    bottom: 15ch;
+  }
+
+  .panel-projects {
+    background-position-y: -10vh;
+  }
+
+  .info-post-title {
+    font-size: 4ch;
+  }
+
+  .info-post-header {
+    font-size: 3ch;
+  }
+
+  .info-post-text {
+    font-size: 2ch;
+  }
+
+  .info-post-image-left {
+    width: 20vw;
+  }
+
+  .info-post-image-right {
+    width: 20vw;
+  }
+
+  .info-footer {
+    height: 30vh;
+  }
+
+  .info-copyright-notice {
+    font-size: 1.5ch;
+  }
+
+  .info-post-external-button {
+    width: 50%;
+    left: 25%;
+    height: 6vh;
+    font-size: 1.5ch;
+  }
 }

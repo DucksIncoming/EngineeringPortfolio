@@ -14,14 +14,16 @@
     <div class="loader"></div>
   </div>
 
-  <div class="site-wrapper">
+  <img class="page-transition" id="page-transition" src="Assets/Graphics/page-transition-2560px.png">
+
+  <div class="site-wrapper" id="site-wrapper">
     <div class="panel" id="panel-header">
       <div class="navigation-container">
         <a id="nav-button-about" class="nav-button" onclick='window.open(href="about-me.html", target="_self")'>About me</a>
-        <a id="nav-button-about" class="nav-button" onclick='window.open(href="education.html", target="_self")'>Education</a>
-        <a id="nav-button-about" class="nav-button" onclick='window.open(href="experience.html", target="_self")'>Experience</a>
-        <a id="nav-button-about" class="nav-button" onclick='window.open(href="projects.html", target="_self")'>Projects</a>
-        <a id="nav-button-about" class="nav-button" onclick='window.open(href="contact.html", target="_self")'>Contact</a>
+        <a id="nav-button-education" class="nav-button" onclick='window.open(href="education.html", target="_self")'>Education</a>
+        <a id="nav-button-experience" class="nav-button" onclick='window.open(href="experience.html", target="_self")'>Experience</a>
+        <a id="nav-button-projects" class="nav-button" onclick='window.open(href="projects.html", target="_self")'>Projects</a>
+        <a id="nav-button-contact" class="nav-button" onclick='window.open(href="contact.html", target="_self")'>Contact</a>
       </div>
 
       <div class="header-widget-left" id="header-widget-left">
@@ -31,7 +33,7 @@
         </div>
 
         <p class="header-left-blurb">I'm a passionate mechanical engineering student at VCU, currently looking for an internship or co-op experience to strengthen my skills and learn from professionals in my field.</p>
-        <button class="header-resume-button" onclick='window.open(href="Assets/Misc/resume.pdf", target="_blank")'>View Resume</button>
+        <button style="z-index: 100" class="header-resume-button" onclick='window.open(href="Assets/Misc/resume.pdf", target="_blank")'>View Resume</button>
         <div class="header-connections-container">
           <input type="image" src="Assets/Icons/Navigation/email-icon.png" class="header-connection" onclick="window.open(href='mailto:jonesr30@vcu.edu', target='_blank')">
           <input type="image" src="Assets/Icons/Navigation/github-logo.png" class="header-connection" onclick='window.open(href="https://github.com/DucksIncoming/", target="_blank")'>
@@ -39,6 +41,7 @@
         </div>
       </div>
       <div class="header-widget-right">
+        <div class="header-background-gray" data-parallax-factor="150"></div>
         <img src="Assets/Images/photo_headshot.png" class="header-headshot-image" data-parallax-factor="40">
         <img src="Assets/Graphics/grid_red_1000px.png" class="header-graphic-grid" data-parallax-factor="70S">
         <img src="Assets/Graphics/segment_circle_red_1000px.png" class="header-graphic-circle" data-parallax-factor="6">
@@ -48,8 +51,7 @@
         </div>
         <img class="header-graphic-arrow" src="Assets/Graphics/arrow_grey_continue.png">
     </div>
-    <div class="panel" id="panel-about-me">
-      <img class="panel-background about-me-background" src="Assets\Images\photo_jlab-group.png" data-parallax-factor="200">
+    <div class="panel panel-aboutme" id="panel-about-me">
       <div class="gradient-overlay-right"></div>
       <p class="panel-title-right">About <span style="font-weight: 900;">Me</span></p>
       <div class="panel-info-box">
@@ -59,8 +61,7 @@
         <button class="panel-info-readmore" onclick='window.open(href="about-me.html", target="_self")'>Read More</button>
       </div>
     </div>
-    <div class="panel" id="panel-education">
-      <img class="panel-background education-background" src="Assets\Images\photo_vcu.png" data-parallax-factor="200">
+    <div class="panel panel-education" id="panel-education">
       <div class="gradient-overlay-left"></div>
       <p class="panel-title-left"><span style="font-weight: 900;">Education</span></p>
       <div class="panel-info-box">
@@ -70,8 +71,7 @@
         <p class="panel-info-text">You can read more about my GPA, relevant courses, student organizations, and more in the education section of my resume or by clicking the "read more" button.</p>
       </div>
     </div>
-    <div class="panel" id="panel-experience">
-      <img class="panel-background experience-background" src="Assets\Images\photo_jlab-presentation.png" data-parallax-factor="200">
+    <div class="panel panel-experience" id="panel-experience">
       <div class="gradient-overlay-right"></div>
       <p class="panel-title-right">Work <span style="font-weight: 900;">Experience</span></p>
       <div class="panel-info-box">
@@ -81,8 +81,7 @@
         <button class="panel-info-readmore" onclick='window.open(href="experience.html", target="_self")'>Read More</button>
       </div>
     </div>
-    <div class="panel" id="panel-projects">
-      <img class="panel-background projects-background" src="Assets\Images\photo_morse-tapper.png" data-parallax-factor="200">
+    <div class="panel panel-projects" id="panel-projects">
       <div class="gradient-overlay-left"></div>
       <p class="panel-title-left"><span style="font-weight: 900;">Projects</span></p>
       <div class="panel-info-box">
