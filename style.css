@@ -264,7 +264,7 @@ body {
 }
 
 .about-me-background {
-  transform: translate(-50%, -40%);
+  transform: translate(-50%, -35%);
 }
 
 .education-background {
@@ -605,7 +605,7 @@ body {
   position: relative;
   margin: 0;
   margin-top: 10vh;
-  height: 22vh;
+  height: 12vw;
   background-color: #1e1e1e;
 } 
 
