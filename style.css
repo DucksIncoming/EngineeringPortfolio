@@ -30,6 +30,7 @@ body {
   overflow: hidden;
   font-family: 'Roboto';
   margin-left: 0;
+  cursor: default;
   margin-top: 0;
 }
 
@@ -367,7 +368,7 @@ body {
 }
 
 .skills-background {
-  background-color: #9197ae;
+  background-color: #484a47;
   width: 100%;
   height: 100%;
 }
@@ -397,7 +398,7 @@ body {
   border-radius: 2vw;
   margin-left: 5vw;
   position: relative;
-  background-color: #484a47;
+  background-color: #9197ae;
 }
 
 .skill-image {
@@ -437,7 +438,7 @@ body {
   border-radius: 100vw;
   color: white;
   font-size: 1vw;
-  background-color: #484a47;
+  background-color: #1e1e1e;
   transition-duration: 0.1s;
 }
 
@@ -458,7 +459,7 @@ body {
   justify-content: center;
   scroll-snap-align: start;
   overflow: hidden;
-  background-color: #484a47;
+  background-color: #0d0d0d;
 }
 
 .contact-title {
@@ -492,7 +493,7 @@ body {
 .info-page-navbar {
   background-color: #1e1e1e;
   width: 100vw;
-  height: 10vh;
+  height: min(10vh, 100px);
   position: absolute;
   top: 0;
   left: 0;
@@ -503,10 +504,10 @@ body {
 
 .info-navbar-button {
   margin-right: 3vw;
-  margin-top: 5vh;
-  transform: translateY(-20%);
+  margin-top: min(5vh, 50px);
+  transform: translateY(-10%);
   color: white;
-  font-size: 3vh;
+  font-size: 2vh;
   float: right;
   text-align: right;
   justify-self: right;
@@ -525,8 +526,8 @@ body {
 .info-navbar-title {
   color: white;
   position: absolute;
-  top: 5vh;
-  font-size: 3vh;
+  top: min(5vh, 50px);
+  font-size: 2vh;
   transform: translateY(-50%);
   left: 2vw;
   opacity: 0.5;
@@ -541,7 +542,7 @@ body {
   width: 100vw;
   height: 100vh;
   position: relative;
-  margin-top: 10vh;
+  margin-top: min(10vh, 100px);
   margin-left: 0;
   background-color: #0d0d0d;
 }
@@ -577,6 +578,7 @@ body {
   margin-right: 1vw;
   width: 20vw;
   position: relative;
+  filter: drop-shadow()
 }
 
 .info-post-image-right {
@@ -589,13 +591,21 @@ body {
 .info-post-text {
   font-size: 1.2vw;
   position: relative;
+  margin-top: 1vh;
+}
+
+.info-post-header {
+  font-size: 1.5vw;
+  position: relative;
+  margin-bottom: 0;
+  text-decoration: underline;
 }
 
 .info-footer {
   position: relative;
   margin: 0;
   margin-top: 10vh;
-  height: 25vh;
+  height: 22vh;
   background-color: #1e1e1e;
 } 
 
@@ -624,4 +634,37 @@ body {
   height: 1vh;
   background-color: #f02d3a;
   margin-left: 30%;
+}
+
+.in-text-link {
+  cursor: pointer;
+  color: #ccffff;
+}
+
+.in-text-link:visited {
+  color: #cc99ff;
+}
+
+b {
+  font-weight: 600;
+}
+
+.info-post-external-button {
+  width: 10vw;
+  height: 3vw;
+  font-size: 0.75vw;
+  cursor: pointer;
+  background-color: #f02d3a;
+  color: white;
+  transition-duration: 0.1s;
+  outline: none;
+  border: 0;
+  margin-left: 25%;
+  margin-top: 5vh;
+  border-radius: 100vw;
+}
+
+.info-post-external-button:hover {
+  background-color: #eff6ee;
+  color: black;
 }
