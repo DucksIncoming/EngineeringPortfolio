@@ -2,8 +2,10 @@ var parallaxElements;
 var mousePosition = [0,0];
 document.onmousemove = handleMousePos;
 
+var pageIsReady = false;
 $(window).on('load', function() { // Page fade in
     $("#loader-wrapper").fadeOut(700);
+    pageIsReady = true;
 
     parallaxElements = document.querySelectorAll('[data-parallax-factor]');
 });
@@ -28,7 +30,9 @@ function handleMousePos(event) {
             (doc && doc.clientTop  || body && body.clientTop  || 0 );
     }
     mousePosition = [event.pageX, event.pageY];
-    parallaxHandler(mousePosition);
+    if (pageIsReady){
+        parallaxHandler(mousePosition);
+    }
 }
 
 function parallaxHandler(mousePosition) {
