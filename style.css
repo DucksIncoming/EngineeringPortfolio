@@ -350,6 +350,7 @@ body {
   left: 0;
   bottom: 0;
   height: 20vh;
+  padding-bottom: 10px;
   background-color: #eff6ee;
   z-index: 15;
   display: flex;
