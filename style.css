@@ -374,7 +374,7 @@ body {
   text-align: right;
   word-spacing: 100vw;
   position: absolute;
-  bottom: 5vh;
+  bottom: 20vh;
   right: 3vw;
 }
 
@@ -387,7 +387,7 @@ body {
   text-align: left;
   word-spacing: 50vw;
   position: absolute;
-  bottom: 5vh;
+  bottom: 20vh;
   left: 3vw;
 }
 
@@ -721,6 +721,64 @@ b {
   border-radius: 100vw;
 }
 
+.project-card {
+  width: 15vw;
+  height: 15vw;
+  margin-left: 7%;
+  position: relative;
+  z-index: none;
+  margin-bottom: 3vw;
+  opacity: 1;
+  border-radius: 2vw;
+  cursor: pointer;
+}
+
+.project-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  position: relative;
+  margin-left: 10%;
+  justify-content: center;
+}
+
+.project-card-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  object-fit: cover;
+  left: 0;
+  border-radius: 2vw;
+  transition: filter 0.25s;
+  z-index: -1;
+}
+
+.project-card:hover > .project-card-img {
+  filter: blur(3px) hue-rotate(180deg);
+}
+
+.project-card:hover > .project-card-title {
+  opacity: 0.9;
+}
+
+.project-card-title {
+  color: white;
+  opacity: 0;
+  line-height: 5vw;
+  transition: opacity 0.75s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: center;
+  margin: 0;
+  font-size: 5vw;
+  font-family: "Barrio", serif;
+}
+
 .info-post-external-button:hover {
   background-color: #eff6ee;
   color: black;
@@ -785,6 +843,22 @@ b {
 }
 
 @media only screen and (max-width: 1170px) and (orientation: portrait) {
+  .project-card {
+    width: 55vw;
+    height: 55vw;
+  }
+
+  .project-card-img {
+    filter: blur(3px) hue-rotate(180deg);
+  }
+
+  .project-card-title {
+    font-size: 10ch;
+    line-height: 2ch;
+    text-align: center;
+    opacity: 1;
+  }
+  
   .navigation-container {
     flex-wrap: wrap;
     justify-content: center;
