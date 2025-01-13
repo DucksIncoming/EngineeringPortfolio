@@ -866,6 +866,14 @@ b {
   transform: translate(-50%, -50%);
 }
 
+.info-post-video {
+  width: 50vw;
+  height: 25vw;
+  position: relative;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
 @media only screen and (max-width: 1170px) and (orientation: portrait) {
   .project-card {
     width: 55vw;

@@ -28,8 +28,68 @@
         <div class="info-post-title-accent"></div>
         <button class="info-post-external-button" onclick="window.open(href='../projects.html', target='_self')">← All Projects</button>
         <div class="info-post-content-container">
-            <img class="info-post-image-left" src="../Assets/Images/capstone-expo-1.jpg">
+            <img class="info-post-image-left" src="../Assets/Images/scope.png">
             <p class="info-post-header"><b>Background</b></p>
+            <p class="info-post-text">Whenever I'm working on a project, I tend to find myself 
+              with dozens of tabs and programs open, each of which has its own audio settings. 
+              All of these overlapping sources can be extremely confusing to work with, as it isn't 
+              always clear which application is making sound, and individually muting programs would 
+              be extremely tedious and inefficient.</p>
+            <p class="info-post-text">The goal for this project was to develop a program which could
+              automatically detect the application in use and allow only that specific audio source to
+              make it through to the user, meaning only tabs actively in use will be able to play audio.
+              Scope was developed as a desktop application using python.
+            </p>
+
+            <img class="info-post-image-right" src="../Assets/Images/scope.png">
+            <p class="info-post-header"><b>Outline</b></p>
+            <p class="info-post-text">Python was used for this project because of its easy integration with the
+              Windows OS audio manager, as well as the many available libraries which tremendously cut down on
+              development time. The user interface should include an on/off switch to allow for easily transitioning
+              between productive and relaxed work, a section for adding rules governing the audio behavior of
+              different applications, and a settings menu to allow the user to specify the minimization and startup
+              behaviors.
+            </p>
+
+            <img class="info-post-image-left" src="../Assets/Images/scope.png">
+            <p class="info-post-header"><b>OS Integration</b></p>
+            <p class="info-post-text">Before building out the GUI, I first sought to establish a way to control the
+              audio of Windows programs through python. To accomplish this, I used the AudioUtilities sublibrary from
+              pycaw, which allows for collecting the active audio sessions present on the operating system. This control
+              allows the program to set the master volume of any active program, meaning it can mute and unmute them when
+              necessary.
+            </p>
+            <p class="info-post-text">Next, there needs to be a way to distinguish between an active and inactive program.
+              Some executables, especially games and media players, prevent audio from being played when the tab is not
+              selected, which seems an intuitive enough behavior to apply to this program. This portion used the win32gui
+              library which provides information about what is on the user's screen at the OS-level. From these libraries,
+              the process ID of the currently selected window can be extracted.
+            </p>
+            <p class="info-post-text">Finally, these two components can be combined so that they properly moderate the
+              audio from inactive programs while allowing audio from the selected window. This now applies to every
+              program on the OS, which isn't necessarily desirable as the user may only want to mute specific applications.
+              To accomplish this, we must move onto developing the GUI.
+            </p>
+            
+            <img class="info-post-image-left" src="../Assets/Images/scope.png">
+            <p class="info-post-header"><b>GUI Development</b></p>
+            <p class="info-post-text">The GUI was created using tkinter and pystray for creating a task tray icon for the
+              program. Tkinter is a very powerful graphical design library for python that allows for complex user
+              interactions, making it a perfect choice for this project.
+            </p>
+
+            <p class="info-post-title">Results</p>
+            <p class="info-post-text">The program executes flawlessly, with the toggle functionality working
+              perfectly to allow a seamless transition between global audio and focus audio. Below is a video
+              embed which provides an example of the audio handling capabilities of this program.
+            </p>
+            <iframe class="info-post-video" src="https://www.youtube.com/embed/ScMzIvxBSi4"></iframe>
+            <p class="info-post-text">This project not only provided me with an effective tool to manage my
+              workflow more efficiently, but also taught me valuable lessons about application programming, GUI
+              development, and the importance of designing an effective and intuitive user experience.
+            </p>
+
+
             <button class="info-post-external-button" onclick="window.open(href='../projects.html', target='_self')">Back to Projects</button>
           </div>
         <div class="info-footer">
