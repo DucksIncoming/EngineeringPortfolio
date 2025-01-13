@@ -898,7 +898,9 @@ b {
 
   .nav-button {
     width: auto;
+    height: 5vw;
     padding: 5px;
+    padding-bottom: 0px;
     border-radius: 10px;
     margin-top: 10px;
     background-color: #484a47;
@@ -948,7 +950,7 @@ b {
   }
 
   .panel-info-text {
-    font-size: 2ch;
+    font-size: 1.5ch;
     width: 40vw;
   }
 
@@ -979,16 +981,29 @@ b {
 
   .skill-block {
     width: 80vw;
-    height: 20vh;
+    height: 20ch;
     margin-left: 5px;
+    margin-bottom: 10px;
   }
 
   .skill-title {
-    font-size: 2ch;
+    font-size: 3ch;
   }
 
   .skill-description {
-    font-size: 1.5ch;
+    font-size: 2ch;
+  }
+
+  .skill-row {
+    display: block;
+  }
+
+  .skill-image {
+    width: 10%;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
   }
 
   .skills-readmore {

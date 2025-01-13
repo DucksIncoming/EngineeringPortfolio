@@ -28,8 +28,49 @@
         <div class="info-post-title-accent"></div>
         <button class="info-post-external-button" onclick="window.open(href='../projects.html', target='_self')">← All Projects</button>
         <div class="info-post-content-container">
-            <img class="info-post-image-left" src="../Assets/Images/capstone-expo-1.jpg">
+            <img class="info-post-image-left" src="../Assets/Images/taser-chess-pcb.PNG">
             <p class="info-post-header"><b>Background</b></p>
+            <p class="info-post-text">The goal for this project was to develop an online chess game that shocks the player using a low-power taser
+              when they make a bad move. The purpose of this was largely for entertainment and does
+              not cause significant pain or damage to the players, as this is intended rather to serve as a fun,
+              more risky alternative to traditional chess. There were three major parts to be developed for this project: 1) The online chessboard, 2) The taser circuit, and 3) The evaluation AI which scores the player's moves.</p>
+            <img class="info-post-image-right" src="../Assets/Images/taserChess_board.PNG">
+            <p class="info-post-header"><b>1) The Chess Board</b></p>
+            <p class="info-post-text">The chess board was developed using pygame in Python, as a live server which runs in the terminal. This part of the project was 
+              primarily programming-focused, and the majority of work done was to get the piece-movement logic working and following the relevant rules of chess.
+            </p>
+            <p class="info-post-text">This software is the only way to interface with the game, thus any move that happens on the computer must be analyzed and,
+              if necessary, the player's taser may need to be activated.
+            </p>
+
+            <img class="info-post-image-left" src="../Assets/Images/taserchess_taser-internals.PNG">
+            <p class="info-post-header"><b>2) Taser Circuit</b></p>
+            <p class="info-post-text">To activate the tasers using the computer, I first needed to take apart the taser circuits so I could manually
+              actuate the taser, instead of using the built-in button.</p>
+            <p class="info-post-text">I soldered two breadboard wires onto the same headers used for the button circuit, so that when the wires touch, 
+              the circuit is completed and the taser activates.</p>
+            <img class="info-post-image-right" src="../Assets/Images/taserchess-circuit.PNG">
+            <p class="info-post-text">With the wires exposed, both were connected to either terminal of a 5-volt relay. The pygame application communicates 
+              using pyfirmata with an Arduino Nano, connected via USB. The signal from two of the Nano's digital pins are routed to the gate pin of each player's
+              relay, meaning once the digital pin is activated, the taser circuit will be completed.</p>
+
+            <img class="info-post-image-left" src="../Assets/Images/taserchess_evaluation.PNG">
+            <p class="info-post-header"><b>3) Evaluation Function</b></p>
+            <p class="info-post-text">The final hurdle to this project was the evaluation function, since I needed to find a way to determine the quality of
+              a move compared against every other possible move. This way the player won't simply be tazed for every piece lost, but rather they'll be judged
+              based on the context of their turn.</p>
+            <p class="info-post-text">To accomplish this, I made use of the Stockfish engine library in python, giving me access to an extremely powerful and
+              fast minimax search algorithm which is capable of finding a near-best move for any board position. To compare the relative quality of any move the
+              player makes, Stockfish is run on the board position prior to their move to determine the current state of the game, indicating the advantage as
+              leaning to one player or another. After the player makes their move, this function is re-run on the new board state, which gives a new advantage. This
+              change in advantage is then compared against an arbitrary threshold, and if the moving player's advantage falls by more than the threshold, it is
+              considered a bad move. This allows some grace for non-optimal but still effective moves from being played, and prevents the players from having to
+              figure out what the engine thinks is the best move.
+            </p>
+
+            <p class="info-post-title">Results</p>
+            <p class="info-post-text">I ran two test games with a handful of friends, </p>
+
             <button class="info-post-external-button" onclick="window.open(href='../projects.html', target='_self')">Back to Projects</button>
           </div>
         <div class="info-footer">
