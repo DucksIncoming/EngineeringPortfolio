@@ -614,6 +614,7 @@ body {
   color: white;
   z-index: 50;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .info-post-title {
