@@ -28,6 +28,7 @@
         <div class="info-post-title-accent"></div>
         <button class="info-post-external-button" onclick="window.open(href='../projects.html', target='_self')">← All Projects</button>
         <div class="info-post-content-container">
+<<<<<<< Updated upstream
             <img class="info-post-image-left" src="../Assets/Images/photo_morse-tapper.png">
             <p class="info-post-header"><b>Objective</b></p>
             <p class="info-post-text">The goal of this project was to construct and program a mechanism capable of translating speech into 
@@ -65,6 +66,40 @@
               morse code back into english for the wearer. The project in itself serves as more of a learning opportunity and proof of concept, however, therefore 
               these issues are not of extreme importance. Overall, the project was a great success and assisted in my process of learning arduino and servo functionality,
               as well as the design process for developing devices which are meant to interface with regular human interaction.
+=======
+            <img class="info-post-image-left" src="../Assets/Images/morse-tapper.png">
+            <p class="info-post-header"><b>Objective</b></p>
+            <p class="info-post-text">The goal for this project was to construct and program a mechanism capable of translating speech into interpretable morse code using a 
+              wearable mechanism. Such a device could allow people who are hard of hearing,  deaf, or have trouble processing speech as it is spoken to interpret everyday
+              conversations without the need for audio. Additionally, this tool only requires the user to understand an alternative form of communication, and does not require
+              other speakers to be educated in a different language (i.e. ASL). Morse code is not a particularly efficient way to translate this information, however it would 
+              prove an effective proof-of-concept for developing interfaces to make communication even easier.</p>
+            <p class="info-post-header">Design</p>
+            <p class="info-post-text">This project was made using Python and Visual Studio Code. There are three main components that must be created and combined to create
+              this mechanism. The first of these components is the speech recognition module. In order to translate the speech spoken into the microphone 
+              into morse code, the spoken speech must first be converted into text for the computer to parse. Using the Google Cloud’s speech recognition API, along with a 
+              Python library that allows easy access to its functionality, this component can be implemented after some settings are tweaked.</p>
+              <p class="info-post-text">
+              The second component is the morse 
+              code translator that translates the speech from the microphone into morse code. Because morse code operates using individual letters rather than entire words, a 
+              function that intakes a single character and returns the morse code equivalent can be implemented for each individual character of the returned speech from the 
+              speech recognition module.</p> 
+              
+              <p class="info-post-text">Finally, the physical tapping mechanism must be built as the final component. The tapping mechanism is built using an arduino nano with a 
+              breadboard that is connected to a SG90 servo motor. This motor receives commands from the Python program dictating the position it must rotate to. The morse code 
+              output from the morse code translator can be passed into a handler function that dictates the timings for the servo motor given standard morse code timing and a 
+              global variable that alters its overall speed while retaining the proportional differences in certain timings. Finally, using the pyfirmata library to interface 
+              with the microcontroller, these commands and timings can be sent to the morse code tapper. Following this, the tapper mechanism can be mounted to the arm of a 
+              wearer and the project will be fully functional.</p>
+
+              <p class="info-post-header">Results</p>
+              <p class="info-post-text">Overall, the project worked extremely well and functions exactly as intended. It’s design is compact enough to be mounted to the wearer’s 
+                arm and the responsiveness of the speech-to-text API makes utilizing the project reasonable. The project, however, suffers from a few core issues. The speed of 
+                the tapper makes longer sentences tedious and difficult to retain in memory when coupled with the requirement of translating the morse code back into english 
+                for the wearer. The project in itself serves as more of a learning opportunity and proof of concept, however, therefore these issues are not of extreme importance. 
+                Overall, the project was a great success and assisted in my process of learning arduino and servo functionality.</p>
+
+>>>>>>> Stashed changes
             <button class="info-post-external-button" onclick="window.open(href='../projects.html', target='_self')">Back to Projects</button>
           </div>
         <div class="info-footer">

@@ -776,9 +776,15 @@ b {
   overflow: hidden;
   object-fit: cover;
   left: 50%;
+<<<<<<< Updated upstream
   border-radius: 2vw;
   transform: translate(-50%, -50%);
   transition: filter 0.25s, width 0.5s, height 0.5s;
+=======
+  transform: translate(-50%, -50%);
+  border-radius: 2vw;
+  transition: filter 0.25s, width 0.3s ease-out, height 0.3s ease-out;
+>>>>>>> Stashed changes
   z-index: -1;
 }
 
@@ -1014,7 +1020,7 @@ b {
   }
 
   .skill-image {
-    width: 10%;
+    width: 5ch;
     position: absolute;
     left: 50%;
     top: 60%;
