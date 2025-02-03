@@ -30,6 +30,38 @@
         <div class="info-post-content-container">
             <img class="info-post-image-left" src="../Assets/Images/capstone-expo-1.jpg">
             <p class="info-post-header"><b>Background</b></p>
+            <p class="info-post-text">In early 2025, my apartment was broken into and robbed. I was not home at the time, thankfully, but my roommates unfortunately were,
+              and they were unfortunately caught in the middle of it. Both made it out fine in the end, but the entire experience definitely shook away any
+              feelings of security or safety I had while in that building. I had exactly one goal for the rest of that month: make sure that can't happen again.
+            </p>
+            
+            <img class="info-post-image-right" src="../Assets/Images/capstone-expo-1.jpg">
+            <p class="info-post-header"><b>Solution #1: Remote Peephole-Camera</b></p>
+            <p class="info-post-text">When our apartment was robbed, the invaders used our neighbor as a decoy to feign entry and get my roommate to open the door, since
+              he could only see a small area outside our door through the peephole. Having so little vision of our front hallway poses a pretty significant security 
+              vulnerability, so the first component for this project sought to provide a better field of view. 
+            </p>
+            <img class="info-post-image-left" src="../Assets/Images/capstone-expo-1.jpg">
+            <p class="info-post-text">I had a PCB camera laying around from a previous project, and it seemed like a perfect component to use for the hallway camera. I
+              used the dimensions of this camera as the basis for the SolidWorks design for the camera mount. To get a full view of the hallway, this camera would
+              ideally be able to be adjusted remotely. For this design, I planned for two axes of rotation, allowing the user to change the yaw and pitch of the camera
+              so any part of the hallway can be in view. To accomplish this, I used two servo motors. I used a larger MG995 servo for the base assembly, since this pivot
+              would need to withstand much higher loads, and used a small SG90 servo for the pitch control.
+            </p>
+            <img class="info-post-image-right" src="../Assets/Images/capstone-expo-1.jpg">
+            <p class="info-post-text">This design went through two iterations, with the first prototype being 3D-printed on a Prusa Mk4 printer using PLA. This model was
+              to ensure the part scale was accurate and to test mounting locations in the hallway so I could better plan the mounting plate design. Following this initial
+              prototype, I recreated the assembly with the necessary tolerances to allow the moving parts to operate. I also designed several 3D printed screw mounts to
+              avoid having to purchase any additional hardware.
+            </p>
+            <img class="info-post-image-left" src="../Assets/Images/capstone-expo-1.jpg">
+            <p class="info-post-text">To ensure the clearance was sufficient for the mechanism to operate, I ran a SolidWorks Motion Study to determine the limiting
+              positions. Both the yaw and pitch range were well within what was expected, and the motion was plenty sufficient for what would cover the hallway. With
+              the final design completed, I used PrusaSlicer to add supports and generate the g-code, then 3D printed the parts again using PLA on a Prusa Mk4.
+            </p>
+            <p class="info-post-header"><b>Remote Peephole-Camera: Performance</b></p>
+            <p class="info-post-text">To operate the camera, I created a Raspberry Pi program designed to interface with a 7" touchscreen meant for use with RasPis.
+            </p>
             <button class="info-post-external-button" onclick="window.open(href='../projects.html', target='_self')">Back to Projects</button>
           </div>
         <div class="info-footer">
