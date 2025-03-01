@@ -28,33 +28,35 @@
         <div class="info-post-title-accent"></div>
         <button class="info-post-external-button" onclick="window.open(href='../projects.html', target='_self')">← All Projects</button>
         <div class="info-post-content-container">
-            <img class="info-post-image-left" src="../Assets/Images/capstone-expo-1.jpg">
+            <img class="info-post-image-left" style="width: auto; height: 15vw;"src="../Assets/Images/security_breakin.PNG">
             <p class="info-post-header"><b>Background</b></p>
             <p class="info-post-text">In early 2025, my apartment was broken into and robbed. I was not home at the time, thankfully, but my roommates unfortunately were,
-              and they were unfortunately caught in the middle of it. Both made it out fine in the end, but the entire experience definitely shook away any
+              and they were unfortunately caught in the middle of it.</p>
+            <p class="info-post-text">
+              Both of them made it out with only minor injuries in the end, but the entire experience definitely shook away any
               feelings of security or safety I had while in that building. I had exactly one goal for the rest of that month: make sure that can't happen again.
             </p>
             
-            <img class="info-post-image-right" src="../Assets/Images/capstone-expo-1.jpg">
+            <img class="info-post-image-right" src="../Assets/Images/peep-cam_cam.png">
             <p class="info-post-header"><b>Solution #1: Remote Peephole-Camera</b></p>
             <p class="info-post-text">When our apartment was robbed, the invaders used our neighbor as a decoy to feign entry and get my roommate to open the door, since
               he could only see a small area outside our door through the peephole. Having so little vision of our front hallway poses a pretty significant security 
               vulnerability, so the first component for this project sought to provide a better field of view. 
             </p>
-            <img class="info-post-image-left" src="../Assets/Images/capstone-expo-1.jpg">
+            <img class="info-post-image-left" src="../Assets/Images/peep-cam_breakdown.png">
             <p class="info-post-text">I had a PCB camera laying around from a previous project, and it seemed like a perfect component to use for the hallway camera. I
               used the dimensions of this camera as the basis for the SolidWorks design for the camera mount. To get a full view of the hallway, this camera would
               ideally be able to be adjusted remotely. For this design, I planned for two axes of rotation, allowing the user to change the yaw and pitch of the camera
               so any part of the hallway can be in view. To accomplish this, I used two servo motors. I used a larger MG995 servo for the base assembly, since this pivot
               would need to withstand much higher loads, and used a small SG90 servo for the pitch control.
             </p>
-            <img class="info-post-image-right" src="../Assets/Images/capstone-expo-1.jpg">
+            <img class="info-post-image-right" src="../Assets/Images/peep-cam_exploded.png">
             <p class="info-post-text">This design went through two iterations, with the first prototype being 3D-printed on a Prusa Mk4 printer using PLA. This model was
               to ensure the part scale was accurate and to test mounting locations in the hallway so I could better plan the mounting plate design. Following this initial
               prototype, I recreated the assembly with the necessary tolerances to allow the moving parts to operate. I also designed several 3D printed screw mounts to
               avoid having to purchase any additional hardware.
             </p>
-            <img class="info-post-image-left" src="../Assets/Images/capstone-expo-1.jpg">
+            <img class="info-post-image-left" src="../Assets/Images/peep-cam_assembled_ver2.png">
             <p class="info-post-text">To ensure the clearance was sufficient for the mechanism to operate, I ran a SolidWorks Motion Study to determine the limiting
               positions. Both the yaw and pitch range were well within what was expected, and the motion was plenty sufficient for what would cover the hallway. With
               the final design completed, I used PrusaSlicer to add supports and generate the g-code, then 3D printed the parts again using PLA on a Prusa Mk4.
@@ -74,7 +76,7 @@
             <p class="info-post-header"><b>Solution #2: Cheaplisafe, an All-In DIY Home Security System</b></p>
             <p class="info-post-text">Along with the security camera build detailed above, this project also sought to create a number of security devices that could
               be combined together to form one cohesive security system. The most important components for this build are:
-              <ul>
+              <ul class="info-post-text">
                 <li>A <a style="color: yellow">Main Unit</a> capable of sending + receiving commands</li>
                 <li>A keypad-enabled <a style="color: yellow">Alarm System</a></li>
                 <li>Door/Window <a style="color: yellow">Entry sensors</a></li>
@@ -82,12 +84,39 @@
                 <li>A hallway <a style="color: yellow">Motion Sensor</a></li>
                 <li>A <a style="color: yellow">Panic Button</a> to automatically trigger the alarm</li>
               </ul>
-
+            <p class="info-post-text">
               The specific components to be built were selected to model the products offered by SimpliSafe®, as these systems encompass a wide variety of security products 
               and offer an opportunity for direct cost comparison between the commercial system and my DIY solution.
             </p>
-            <p class="info-post-text">
+            <img class="info-post-image-large" src="..\Assets\Images\cheaplisafe_cost-analysis.png">
+            <p class="info-post-text">The table above shows the price of a solution from SimpliSafe, coming to a total of $359.93 for a relatively basic security system. This price is extremely high, however
+              the "Cheaplisafe" solution was able to reduce this cost by $290.88 while maintaining the same functionality. The greatest cost savings came from the central unit and alarm systems.
             </p>
+
+            <p class="info-post-text">These components were successful in providing protection and alerting the user to disturbances to their secure perimeter. Additionally, through the design of the central unit,
+              this system can theoretically accomodate an unlimited number of additional components, so long as they are able to transmit an alarm signal to the central unit. This piezo buzzer alarm can be replaced
+              with a more effective component, such as one which sends automated texts to your phone in the case of a break-in. 
+            </p>
+            
+            <div class="info-post-files-section">
+              <p class="info-post-files-header">Files</p>
+              <div class="info-post-file" onclick="window.open(href='../Assets/Files/Cheaplisafe/peephole-camera-assembly.zip')">
+                <img class="info-post-file-icon" src="../Assets/Images/FileIcons/file-icon_zip.png">
+                <p class="info-post-file-title">peephole-camera-assembly.zip (SolidWorks 2023)</p>
+                <img class="info-post-file-download" src="../Assets/Images/FileIcons/file-icon_download.png">
+              </div>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
             <button class="info-post-external-button" onclick="window.open(href='../projects.html', target='_self')">Back to Projects</button>
           </div>
         <div class="info-footer">
