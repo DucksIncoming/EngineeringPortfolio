@@ -84,17 +84,17 @@ body {
 }
 
 .panel-education {
-  background-image: url("Assets/Images/photo_vcu.png");
+  background-image: url("Assets/Images/capstone-expo-1.jpg");
   background-position-y: 50%;
 }
 
 .panel-experience {
-  background-image: url("Assets/Images/photo_jlab-presentation.png");
+  background-image: url("Assets/Images/VMC_ALD-Operation.jpg");
   background-position-y: 50%;
 }
 
 .panel-projects {
-  background-image: url("Assets/Images/photo_morse-tapper.png");
+  background-image: url("Assets/Images/Peepcam_Initialized.jpg");
   background-position-y: 100%;
 }
 
@@ -167,8 +167,10 @@ body {
   color: #eff6ee;
   font-size: max(10vw,8vh);
   font-weight: 100;
+  line-height: max(9vw,7vh);
   padding: 0;
   margin: 0;
+  margin-top: 5vh;
   word-spacing: 100vw;
 }
 
@@ -378,6 +380,14 @@ body {
   right: 3vw;
 }
 
+.panel-title-right-animated {
+  animation: fadeInRight 0.5s ease-out 1;
+}
+
+.panel-title-left-animated {
+  animation: fadeInLeft 0.5s ease-out 1;
+}
+
 .panel-title-left {
   z-index: 20;
   color: white;
@@ -432,7 +442,7 @@ body {
   color: white;
   font-size: 2vw;
   text-align: center;
-  font-weight: 300;
+  font-weight: 600;
   margin-top: 10vh;
   margin-bottom: 10vh;
 }

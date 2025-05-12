@@ -40,18 +40,47 @@ function parallaxHandler(mousePosition) {
     let h = window.innerHeight;
 
     let relToCenterPos = [mousePosition[0] - (w / 2), mousePosition[1] - (h / 2)];
-
+    
+    let offset = 0;
     for (let i = 0; i < parallaxElements.length; i++){
         if (w > 600){
             let parallaxStrength = parseInt(parallaxElements[i].getAttribute("data-parallax-factor"));
-        parallaxElements[i].style.left = (50 + (-relToCenterPos[0] / (10 * parallaxStrength))).toString() + "%";
-        parallaxElements[i].style.top = (50 + (-relToCenterPos[1] / (10 * parallaxStrength))).toString() + "%";
+            parallaxElements[i].style.left = (50 + (-relToCenterPos[0] / (10 * parallaxStrength))).toString() + "%";
+            parallaxElements[i].style.top = (50 + (-relToCenterPos[1] / (10 * parallaxStrength))).toString() + "%";
         }
         else {
             parallaxElements[i].style.left = 50;
-        parallaxElements[i].style.top = 50;
-            
+            parallaxElements[i].style.top = 50;  
         }
-        
     }
 }
+
+// Create the observer like the examples above
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains("panel-title-right")){
+            entry.target.classList.add('panel-title-right-animated');
+            return;
+        }
+        else {
+            entry.target.classList.add('panel-title-left-animated');
+            return;
+        }
+        
+      }
+  
+      if (entry.target.classList.contains("panel-title-right")){
+        entry.target.classList.remove('panel-title-right-animated');
+      }
+      else {
+        entry.target.classList.remove('panel-title-left-animated');
+      }
+    });
+  });
+  
+  // Get multiple elements instead of a single one using "querySelectorAll"
+  const squares = document.querySelectorAll('.panel-title');
+  
+  // Loop over the elements and add each one to the observer
+  squares.forEach((element) => observer.observe(element));
